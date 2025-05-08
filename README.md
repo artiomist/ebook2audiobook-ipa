@@ -12,8 +12,7 @@ This script is a workaround that uses IPA transcriptor and xtts-ru-ipa model.
 
 1. pip install git+https://github.com/omogr/omogre.git
 
-This will install Omogre, Russian accentuator and IPA transcriptor. https://github.com/omogr/omogre?tab=readme-ov-file
-#will download C:\Users\admin\omogre_data sidefiles
+This will install Omogre, Russian accentuator and IPA transcriptor. https://github.com/omogr/omogre
 
 2. Download russian ipa files from https://huggingface.co/omogr/xtts-ru-ipa/tree/main
  and zip to "xtts-ru-ipa.zip"
