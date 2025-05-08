@@ -24,7 +24,7 @@ This will install Omogre, Russian accentuator and IPA transcriptor. https://gith
 4. 
 	<pre>pip install ebooklib bs4 num2words</pre>
 	#run once, needed for transcribe_epub_book_file.py
-	<pre>python "C:\Users\admin\Downloads\transcribe_file_9_book.py" "C:\Users\admin\Downloads\Downloads\XXX.epub"</pre>
+	<pre>python "C:\Users\admin\Downloads\transcribe_epub_book_file.py" "C:\Users\admin\Downloads\Downloads\XXX.epub"</pre>
 	- this will make "C:\Users\admin\Downloads\XXX_processed.epub" file
 	- transcribes russian for xtts_ru_ipa model using IPA installed in step 1, processes only index_split_XXX.xhtml files
  	- keeps english intact
