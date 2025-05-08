@@ -118,32 +118,6 @@ def process_epub(input_epub_path):
     shutil.make_archive(new_epub_path.replace('.epub', ''), 'zip', output_folder)
     os.rename(new_epub_path.replace('.epub', '.zip'), new_epub_path)
     print(f"✅ Done! New EPUB created: {new_epub_path}")
-    
-    """
-    for item in book.get_items():
-        href = item.get_name()
-        filename = os.path.basename(href).lower()  # Lowercase filename for comparison
-        item_id = item.get_id()
-        item_type = item.get_type()
-        print(f"Item ID: {item_id} | File: {href} | Type: {item_type}")
-
-        file_path = os.path.join(output_folder, href)
-        os.makedirs(os.path.dirname(file_path), exist_ok=True)
-
-        try:
-            content = item.get_content()
-            if href.lower().endswith('.xhtml'):
-                print(f"📄 Transcribing: {href}")
-                content = transcribe_chapter(content.decode('utf-8')).encode('utf-8')
-            else:
-                print(f"📁 Copying resource: {href}")
-            with open(file_path, 'wb') as f:
-                f.write(content)
-        except Exception as e:
-            print(f"❌ Error with {href}: {e}")
-
-    print("✅ Done!")
-    """
 
 
 if __name__ == '__main__':
