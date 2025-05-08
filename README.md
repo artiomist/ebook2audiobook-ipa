@@ -15,7 +15,7 @@ This script is a workaround that uses IPA transcriptor and xtts-ru-ipa model.
 This will install Omogre, Russian accentuator and IPA transcriptor. https://github.com/omogr/omogre
 
 2. Download russian ipa files from https://huggingface.co/omogr/xtts-ru-ipa/tree/main
- and zip to "xtts-ru-ipa.zip"
+ and zip to "xtts-ru-ipa.zip". This is an IPA model that uses this corpus https://ruslan-corpus.github.io/
 
 3. convert audiobook from anyformat to epub
    <pre>C:\Users\admin\scoop\shims\ebook-convert.EXE C:\Users\admin\Downloads\XXX.fb2 C:\Users\admin\Downloads\XXX.epub</pre>
