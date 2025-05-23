@@ -10,7 +10,7 @@ This script is a workaround that uses IPA transcriptor and xtts-ru-ipa model.
 - assuming the user path is C:\Users\admin\
 - on my pc GPU option (step 5) is twice as fast as CPU (~20000sec GPU, 54000sec CPU)
 
-1. pip install git+https://github.com/omogr/omogre.git
+1. <pre>pip install git+https://github.com/omogr/omogre.git</pre>
 
 This will install Omogre, Russian accentuator and IPA transcriptor. https://github.com/omogr/omogre
 
