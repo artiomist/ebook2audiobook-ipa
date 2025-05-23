@@ -33,27 +33,11 @@ This will install Omogre, Russian accentuator and IPA transcriptor. https://gith
 5. run with GPU, go to step 6 if you use CPU
 - Use https://github.com/DrewThomasson/ebook2audiobook code
 <pre>docker run --pull always --rm --gpus all -p 7860:7860 athomasson2/ebook2audiobook </pre>
-- load xtts-ru-ipa.zip into custom model zip
-- Then there is a strange bug. My workaround was to delete the zip and reload it, maybe multiple times, till you get an error:
-"Loading TTS xtts model, it takes a while, please be patient...
-load_coqui_tts_checkpoint() error: [Errno 2] No such file or directory: '/app/models/__sessions/model-64efd217-6c2b-4a39-b850-5d4c4a68bb12/xtts/xtts-ru-ipa/config.json'
-convert_chapters_to_audio() failed!"
-
-then manually add files to docker image in terminal 
-<pre>docker cp C:\Users\admin\Downloads\xtts-ru-ipa\vocab.json interesting_hypatia:/app/models/__sessions/model-64efd217-6c2b-4a39-b850-5d4c4a68bb12/xtts/xtts-ru-ipa</br>
-docker cp C:\Users\admin\Downloads\xtts-ru-ipa\model.pth interesting_hypatia:/app/models/__sessions/model-64efd217-6c2b-4a39-b850-5d4c4a68bb12/xtts/xtts-ru-ipa</br>
-docker cp C:\Users\admin\Downloads\xtts-ru-ipa\ref.wav  interesting_hypatia:/app/models/__sessions/model-64efd217-6c2b-4a39-b850-5d4c4a68bb12/xtts/xtts-ru-ipa</br>
-docker cp C:\Users\admin\Downloads\xtts-ru-ipa\config.json  interesting_hypatia:/app/models/__sessions/model-64efd217-6c2b-4a39-b850-5d4c4a68bb12/xtts/xtts-ru-ipa</pre>
+- load xtts-ru-ipa.zip into custom model zip (it must be a zip without folder inside but 4 files: ref.wav, model.pth, config.json, vocab.json).
 	
 6. run with CPU, go to step 5 if you use GPU
 -run ebook2audiobook/ebook2audiobook.cmd
-- load xtts-ru-ipa.zip into custom model zip
-- Then there is a strange bug. My workaround was to delete the zip and reload it, maybe multiple times, till you get an error:
-"Loading TTS xtts model, it takes a while, please be patient...
-load_coqui_tts_checkpoint() error: [Errno 2] No such file or directory: 'C:\Users\admin\ebook2audiobook\models\__sessions\model-64efd217-6c2b-4a39-b850-5d4c4a68bb12\xtts\xtts-ru-ipa'
-convert_chapters_to_audio() failed!"
-- then manually copy files to "C:\Users\admin\ebook2audiobook\models\__sessions\model-64efd217-6c2b-4a39-b850-5d4c4a68bb12\xtts\xtts-ru-ipa"
-
+- load xtts-ru-ipa.zip into custom model zip (it must be a zip without folder inside but 4 files: ref.wav, model.pth, config.json, vocab.json).
 
 7. - open http://localhost:7860/
 - select C:\Users\admin\Downloads\XXX_processed.epub
